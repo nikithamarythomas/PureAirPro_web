@@ -7,7 +7,7 @@
 </div>
 <div class="row">
     <div class="col-8">
-        <div class="card">
+        <div class="card form_card">
             <div class="card-body">
                 <h5 class="card-title mb-5">Have a question or concern? Reach out and we’ll connect shortly</h5>
                 <form class="mb-4" method="post" action="/Contact/contactForm" id="ContactForm">
@@ -43,9 +43,26 @@
         </div>
     </div>
     <div class="col-4">
-        <div class="card">
+        <div class="card social_card">
             <div class="card-body">
-                <h5 class="card-title">Stay Connected</h5>
+                <h5 class="card-title mb-3">Stay Connected</h5>
+                <div class="mb-3">
+                    <a href="#" class="fa fa-facebook mr-3"></a>
+                    <span>Facebook</span>
+                </div>
+                <div class="mb-3">
+                    <a href="#" class="fa fa-instagram"></a>
+                    <span>Instagram</span>
+                </div>
+                <div class="mb-3">
+                    <a href="#" class="fa fa-twitter"></a>
+                    <span>Twitter</span>
+                </div>
+                <div class="mb-3">
+                    <a href="#" class="fa fa-youtube"></a>
+                    <span>YouTube</span>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -61,6 +78,42 @@
     font-weight: 300;
     line-height: 18px;
     padding: 12px 43px 10px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 15px;
+  margin-left: 25px;
+  margin-right: 10px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.form_card{
+    border-radius: 25px;
+}
+.social_card{
+    border-radius: 25px;
 }
 
 </style>
