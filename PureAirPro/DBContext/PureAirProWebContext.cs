@@ -17,12 +17,12 @@ namespace PureAirPro.DBContext
         }
 
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
+        public virtual DbSet<Users> Users { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server= DESKTOP-2UKJO7T; Database=PureAirProWeb;Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=true");
             }
         }
@@ -57,6 +57,31 @@ namespace PureAirPro.DBContext
                 entity.Property(e => e.UpdatedDate)
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
+            });
+            modelBuilder.Entity<Users>(entity =>
+            {
+                entity.HasKey(e => e.UserID)
+                    .HasName("PK__Users__1788CCACBB19605D");
+
+                entity.Property(e => e.FirstName).HasColumnName("FirstName");
+
+                entity.Property(e => e.LastName)
+                    .HasColumnName("LastName");
+
+                entity.Property(e => e.Email)
+                    .HasColumnName("Email");
+
+                entity.Property(e => e.UserPassWord)
+                    .HasColumnName("UserPassWord");
+
+                entity.Property(e => e.ConfirmPassword)
+                    .HasColumnName("ConfirmPassword");
+
+                entity.Property(e => e.CreatedDate)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.IsDeleted).HasDefaultValueSql("((0))");
             });
 
             OnModelCreatingPartial(modelBuilder);
