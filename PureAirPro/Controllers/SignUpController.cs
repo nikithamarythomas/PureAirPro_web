@@ -33,6 +33,7 @@ namespace PureAirPro.Controllers
                     context.SaveChanges();
                     SMTPEmail sMTPmail = new SMTPEmail();
                     await sMTPmail.TaskSendEmail(User.Email,User.FirstName,User.LastName);
+                    
                 }
                 catch (Exception ex)
                 {
@@ -55,6 +56,8 @@ namespace PureAirPro.Controllers
                     var UserByEmail = dbContext.Users.Where(x => x.Email == loginViewModel.Email && x.UserPassWord == loginViewModel.PassWord).FirstOrDefault();
                     if (UserByEmail != null)
                     {
+                        TempData["LoginUser"] = UserByEmail.FirstName + " " + UserByEmail.LastName;
+                        TempData.Keep("LoginUser");
                         return RedirectToAction("Index", "Home");
                     }
                     else

@@ -47,6 +47,11 @@ namespace PureAirPro.DBContext
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.OrderName).HasMaxLength(200);
+                entity.Property(e => e.AddressLine1);
+                entity.Property(e => e.AddressLine2);
+                entity.Property(e => e.Province).HasMaxLength(200);
+                entity.Property(e => e.Country).HasMaxLength(200);
+                entity.Property(e => e.City).HasMaxLength(200);
 
                 entity.Property(e => e.PostalCode).HasMaxLength(200);
 

@@ -16,6 +16,7 @@ namespace PureAirPro.Controllers
 
         public IActionResult Index()
         {
+            TempData.Keep("LoginUser");
             return View();
         }
 

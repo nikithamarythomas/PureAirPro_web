@@ -12,7 +12,11 @@ namespace PureAirPro.Controllers
         }
         public IActionResult ProductOrder()
         {
-            return View();
+            OrderDetail orderDetail = new();
+            orderDetail.OrderName = "PureAir Pro";
+            orderDetail.Quantity = 1;
+            orderDetail.Price = 100.00M;
+            return View(orderDetail);
         }
         public IActionResult AddProductOrder(OrderDetail orderDetail)
         {

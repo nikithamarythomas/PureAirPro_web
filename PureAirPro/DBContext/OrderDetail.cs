@@ -10,7 +10,11 @@ namespace PureAirPro.DBContext
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public decimal TotalPrice { get; set; }
-        public string OrderAddress { get; set; } = null!;
+        public string AddressLine1 { get; set; } = null!;
+        public string AddressLine2 { get; set; } = null!;
+        public string Province { get; set; } = null!;
+        public string Country { get; set; } = null!;
+        public string City { get; set; } = null!;
         public string PostalCode { get; set; } = null!;
         public DateTime? OrderDate { get; set; }
         public DateTime? InsertedDate { get; set; }

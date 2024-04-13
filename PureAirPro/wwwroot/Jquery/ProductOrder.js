@@ -1,0 +1,22 @@
+﻿$(document).ready(function () {
+    $('.js-example-basic-single').select2();
+});
+function onSuccess() {
+    Swal.fire({
+        title: "Congratulations!!",
+        text: "Thank you for your order! We've received it and will process it promptly. You'll receive a confirmation email shortly. Expect delivery within 7 days.",
+        icon: "success"
+    }).then(function () {
+        window.location = "/Home/Index";
+    });
+}
+function onFailure() {
+
+}
+
+$("#Quantity").on('change', function () {
+    var quantity = $(this).val();
+    var price = $("#Price").val();
+    var TotalPrice = (price * quantity).toFixed(2);
+    $("#TotalPrice").val();
+}) 
