@@ -18,7 +18,7 @@ function onFailure() {
 
 }
 
-$("#Quantity").on('change', function () {
+$("#Quantity").on('keyup', function () {
     var quantity = $(this).val();
     var price = $("#Price").val();
     var TotalPrice = (price * quantity).toFixed(2);
