@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace PureAirPro.DBContext
 {
@@ -7,12 +8,18 @@ namespace PureAirPro.DBContext
     {
         public int OrderId { get; set; }
         public string OrderName { get; set; } = null!;
+        [Required]
         public int Quantity { get; set; }
+        [Required]
         public decimal Price { get; set; }
+        [Required]
         public decimal TotalPrice { get; set; }
+        [Required]
         public string AddressLine1 { get; set; } = null!;
         public string AddressLine2 { get; set; } = null!;
+        [Required]
         public string Province { get; set; } = null!;
+        [Required]
         public string Country { get; set; } = null!;
         public string City { get; set; } = null!;
         public string PostalCode { get; set; } = null!;

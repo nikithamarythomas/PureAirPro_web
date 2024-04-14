@@ -76,6 +76,9 @@
                             <!--end::Label-->
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" type="text" asp-for="Email">
+                            <div>
+                                <span asp-validation-for="Email" style="color:red !important"></span>
+                            </div>
                             <!--end::Input-->
                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                         </div>
@@ -96,6 +99,9 @@
                             <!--end::Wrapper-->
                             <!--begin::Input-->
                             <input class="form-control form-control-lg form-control-solid" type="password" asp-for="PassWord">
+                            <div>
+                                <span asp-validation-for="PassWord" style="color:red !important"></span>
+                            </div>
                             <!--end::Input-->
                             <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
                         </div>

@@ -18,5 +18,5 @@ $("#Quantity").on('change', function () {
     var quantity = $(this).val();
     var price = $("#Price").val();
     var TotalPrice = (price * quantity).toFixed(2);
-    $("#TotalPrice").val();
+    $("#TotalPrice").val(TotalPrice);
 }) 

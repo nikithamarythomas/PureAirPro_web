@@ -61,16 +61,16 @@ body {
     margin-top: 20px;
 }
 
-.discount-offer h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
+    .discount-offer h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #333;
+    }
 
-.discount-offer p {
-    font-size: 18px;
-    color: #666;
-}
+    .discount-offer p {
+        font-size: 18px;
+        color: #666;
+    }
 
 .buy-button {
     margin-top: 30px;
@@ -118,14 +118,13 @@ body {
     position: relative;
 }
 
-.benefits-description li::before {
-    content: "\f058";
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin-right: 10px;
-    color: #5cb85c;
-    position: absolute;
-    left: -25px;
-    top: 2px;
-}
-
+    .benefits-description li::before {
+        content: "\f058";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-right: 10px;
+        color: #5cb85c;
+        position: absolute;
+        left: -25px;
+        top: 2px;
+    }
