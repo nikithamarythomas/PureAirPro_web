@@ -2,6 +2,7 @@
     $('.js-example-basic-single').select2();
 });
 function onSuccess() {
+    $('#loader').addClass('hidden');
     Swal.fire({
         title: "Congratulations!!",
         text: "Thank you for your order! We've received it and will process it promptly. You'll receive a confirmation email shortly. Expect delivery within 7 days.",
@@ -9,6 +10,9 @@ function onSuccess() {
     }).then(function () {
         window.location = "/Home/Index";
     });
+}
+function onBegin() {
+    $('#loader').removeClass('hidden');
 }
 function onFailure() {
 
