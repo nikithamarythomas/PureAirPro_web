@@ -6,6 +6,12 @@
 <html>
 <head>
     <title>Home Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js">
+    </script>
     <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
    @*  <link rel="stylesheet" type="text/css" href="C:/Users/helly/OneDrive/Desktop/assignment/Capstrome/pureair_pro website/PureAirPro/wwwroot/css/home.css"> *@
 </head>
@@ -19,6 +25,9 @@
                     <div class="hero-text">
                         <h1>Welcome to Our E-commerce Store</h1>
                         <p>Discover the best deals on a wide range of products!</p>
+                        <form class=" " asp-controller="Home" asp-action="CallAPi" data-ajax="true" data-ajax-method="GET" data-ajax-begin="onBeginapi" data-ajax-success="onSuccessapi" data-ajax-failure="onFailureapi">
+                        <button type="submit" style="display:flex;">Predict AQI</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -59,6 +68,10 @@
     <script src="script.js"></script>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@section Scripts {
+    <script src="~/Jquery/ProductOrder.js"></script>
+}
 @* <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

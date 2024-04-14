@@ -17,6 +17,19 @@ function onBegin() {
 function onFailure() {
 
 }
+function onSuccessapi(response) {
+    $('#loader').addClass('hidden');
+    Swal.fire({
+        title: "The Predicted AQI Of The Coming Hour: " + response,
+        icon: "success"
+    });
+}
+function onBeginapi() {
+    $('#loader').removeClass('hidden');
+}
+function onFailureapi() {
+
+}
 
 $("#Quantity").on('change', function () {
     var quantity = $(this).val();
