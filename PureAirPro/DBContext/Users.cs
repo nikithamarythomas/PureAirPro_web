@@ -13,7 +13,9 @@ namespace PureAirPro.DBContext
         [EmailAddress(ErrorMessage = "Please enter a valid email")]
         public string Email { get; set; }
         [Required (ErrorMessage = "Password field is required.")]
-        public string UserPassWord { get; set; }
+		[RegularExpression(@"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
+		 ErrorMessage = "Password must meet requirements")]
+		public string UserPassWord { get; set; }
         [Required]
         [Compare("UserPassWord",ErrorMessage = "'Confirm Password' and 'PassWord' do not match.")]
         public string ConfirmPassword { get; set; }

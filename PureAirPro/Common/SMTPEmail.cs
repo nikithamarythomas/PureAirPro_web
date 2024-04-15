@@ -11,7 +11,7 @@ namespace PureAirPro.Common
         {
             try
             {
-                var apiKey = "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";
+                var apiKey = "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";
                 var client = new SendGridClient(apiKey);
                 var from = new EmailAddress("krunal.international.patel@gmail.com", "PureAir Pro Support");
                 var subject = "Welcome to PureAir Pro - Your Source for Clean Air!";
