@@ -27,6 +27,13 @@ function onSuccessapi(response) {
 function onBeginapi() {
     $('#loader').removeClass('hidden');
 }
+function onSuccessSignUp(response) {
+    $('#loader').addClass('hidden');
+    window.location = "/Home/Index";
+}
+function onBeginSignUp() {
+    $('#loader').removeClass('hidden');
+}
 function onFailureapi() {
 
 }

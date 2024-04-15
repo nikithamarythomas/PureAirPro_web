@@ -40,7 +40,7 @@ namespace PureAirPro.Controllers
 
                 }
             }
-            return RedirectToAction("Index", "Home");
+            return Json(true);
         }
 
         [HttpPost]
