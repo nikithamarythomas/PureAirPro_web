@@ -111,11 +111,13 @@ body {
     list-style-type: none;
     padding: 0;
     text-align: left;
+    font-size: 30px;
 }
 
 .benefits-description li {
     margin-bottom: 10px;
     position: relative;
+    font-size: 19px;
 }
 
     .benefits-description li::before {
@@ -128,3 +130,6 @@ body {
         left: -25px;
         top: 2px;
     }
+.benefits-section ul li {
+    font-size: 18px;
+}

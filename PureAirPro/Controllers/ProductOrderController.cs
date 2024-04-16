@@ -15,8 +15,8 @@ namespace PureAirPro.Controllers
             OrderDetail orderDetail = new();
             orderDetail.OrderName = "PureAir Pro";
             orderDetail.Quantity = 1;
-            orderDetail.Price = 59.99M;
-            orderDetail.TotalPrice = 59.99M;
+            orderDetail.Price = 49.99M;
+            orderDetail.TotalPrice = 49.99M;
             return View(orderDetail);
         }
         public IActionResult AddProductOrder(OrderDetail orderDetail)
